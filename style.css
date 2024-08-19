@@ -1,0 +1,587 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #6fcc6a;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    padding: 0 5%;
+    position: fixed;
+    z-index: 999;
+    transition: 0.3s;
+    backdrop-filter: blur(1px);
+}
+
+header img {
+    width: 60px;
+    height: 60px;
+    color: white;
+}
+
+header nav {
+    display: flex;
+    gap: 30px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 8px 16px;
+    text-shadow: 0 0 10px #606676;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+header nav a.active {
+    background: #409e60;
+    color: white;
+}
+
+header nav a:hover {
+    background: #409e60;
+    color: white;
+}
+
+header nav:hover>a:not(:hover) {
+    background: none;
+    color: #409e60;
+}
+
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+
+
+
+
+
+.home {
+    height: 100vh;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    background: rgb(111,227,224);
+background: linear-gradient(180deg, rgba(111,227,224,1) 23%, rgba(228,246,239,1) 79%, rgba(255,173,128,1) 87%);
+}
+
+.home img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    pointer-events: none;
+    transition: transform 0.5s ease-out;
+}
+
+.judul {
+    position: absolute;
+    background: rgb(29 30 30 / 30%);
+    backdrop-filter: blur(5px);
+    width: 30%;
+    height: 60%;
+    top: 15%;
+    left: 15%;
+    border-radius: 20px;
+    border: #FEF3E2 solid 3px;
+    transition: transform 0.5s ease-out;
+}
+
+.judul h1 {
+    margin: 20px;
+    font-size: auto;
+    color: aliceblue;
+}
+
+.judul p {
+    margin: 20px;
+    font-size: larger;
+    font-weight: 600;
+    color: aliceblue;
+}
+
+.judul button {
+    background-color: #6fcc6a;
+    border-radius: 25px;
+    width: 25%;
+    font-size: 3vh;
+    font-weight: 600;
+    padding: 5px ;
+    color: aliceblue;
+    border: none;
+    transition: ease-out 0.3s;
+    position: absolute;
+    top: 85%;
+    left: 60%;
+}
+
+.judul button:hover {
+    background-color: #409e60;
+}
+
+.judul a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.cover {
+    background-color: #6fcc6a;
+    height: 40vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.cover h1 {
+    font-size: 7vh;
+    color: aliceblue;
+}
+
+.content {
+    height: 60vh;
+    position: relative;
+    background-color: aliceblue;
+    display: flex;
+    width: 100%;
+}
+
+
+
+.manfaat {
+    color: #409e60;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    top: -10vh;
+}
+
+.isimanfaat img {
+    height: 35vh;
+}
+.isimanfaat {
+    height: 35vh;
+    width: 35vh;
+    display: grid;
+    text-align: center;
+    margin: 5vh;
+}
+
+.custom-shape-divider-top-1723911342 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 300px;
+    transform: rotate(180deg);
+    fill: #6fcc6a;
+}
+
+.custom-shape-divider-top-1723911342 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.2px);
+    height: 340px;
+}
+
+.custom-shape-divider-top-1723911342 .shape-fill {
+    fill: #6fcc6a;
+}
+
+.bmi {
+    height: 70vh;
+    width: 100%;
+    background-color: aliceblue;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    display: flex;
+    border-radius: 0 0 7vh 7vh;
+}
+
+.bmi h1 {
+    margin: 5vh;
+    font-size: 5vh;
+}
+
+.bmi p {
+    font-size: 3vh;
+}
+
+.bmi img {
+    position: absolute;
+    width: 100%;
+}
+
+.bmi button {
+    background-color: #6fcc6a;
+    padding: 1vh;
+    border-radius: 25px;
+    border: none;
+}
+
+.bmi button:hover {
+    background-color: #409e60;
+}
+
+.bmi a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 3vh;
+    font-weight: 600;
+}
+
+
+.latih {
+    width: 100%;
+    background-color: #6fcc6a;
+    justify-content: center;
+    position: relative;
+    color: aliceblue;
+}
+
+.latih h1 {
+    font-size: 5vh;
+}
+
+.titleact {
+    padding: 5vh;
+}
+
+.titleact p {
+    font-size: 3vh;
+}
+
+.latihcontentg {
+    display: flex;
+    padding: 5vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #6fcc6a;
+    overflow: hidden;
+}
+
+.latihcontentg img {
+    height: 35vh;
+}
+.latihcontenta {
+    border-radius: 10vh;
+    display: flex;
+    padding: 5vh;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+    color: black;
+    overflow: hidden;
+}
+
+.latihcontenta img {
+    height: 35vh;
+}
+
+.latihchild {
+    padding: 5vh;
+}
+.latihchild h1 {
+    font-size: 5vh;
+    margin-bottom: 2vh;
+}
+
+.contact {
+    height: 40vh;
+    width: 100%;
+    background-color: aliceblue;
+    justify-content: center;
+    position: relative;
+    border-radius: 7vh 7vh 0 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact img {
+    height: 100%;
+}
+
+.isikontak {
+    text-align: center;
+    padding: 2vh;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.isikontak h1{
+    font-size: 3.2vh;
+    margin: 2vh;
+}
+
+.isikontak p {
+    font-size: 2.3vh;
+    margin: 2vh;
+}
+
+.isikontak a {
+    text-decoration: none;
+    color: black;
+    margin: 2vh;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+
+    .hamburger {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: rgb(29 30 30 / 30%);
+    backdrop-filter: blur(5px);
+        padding: 20px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+        z-index: 999;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        pointer-events: none; /* Tidak bisa diklik */
+    }
+    
+    nav.active {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto; /* Bisa diklik */
+    }
+    
+    
+    nav a {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    nav.active a {
+        opacity: 1;
+        transition: opacity 0.3s ease 0.2s; /* Tambahkan delay untuk memastikan background muncul lebih dahulu */
+    }
+    
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translateY(10px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translateY(-10px);
+    }
+
+
+    .judul {
+        width: 50%;
+        height: 50%;
+        top: 30%;
+        left: 10%;
+    }
+
+    .judul h1 {
+        font-size: 2vh;
+    }
+
+    .judul p {
+        font-size: 1.5vh;
+    }
+
+    .judul button {
+        width: 30%;
+        font-size: 2vh;
+    }
+
+    .custom-shape-divider-top-1723911342 svg {
+        width: calc(100% + 1.3px);
+        height: 127px;
+    }
+
+    .cover h1 {
+        font-size: 5vh;
+    }
+
+    .bmi {
+        height: 75vh;
+    }
+
+    .bmi h1 {
+        font-size: 4vh;
+    }
+
+    .bmi p {
+        font-size: 2vh;
+    }
+
+    .content {
+        height: 200vh;
+        display: grid;
+    }
+    
+    .manfaat {
+        display: grid;
+    }
+
+    .isimanfaat h1 {
+        font-size: 3vh;
+    }
+
+    .titleact h1 {
+        font-size: 3vh;
+    }
+
+    .titleact p {
+        font-size: 2vh;
+    }
+
+    .latihcontentg {
+        display: grid;
+        text-align: center;
+    }
+
+    .latihcontenta {
+        display: grid;
+        text-align: center;
+    }
+
+    .latihchild h1 {
+        font-size: 4vh;
+    }
+
+    .latihchild p {
+        font-size: 2.5vh;
+    }
+
+    .latihcontentg img, .latihcontenta img {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .judul {
+        width: 60%;
+        height: 40%;
+    }
+
+    .judul p {
+        font-size: 1.5vh;
+    }
+
+    .judul button {
+        width: 25%;
+        font-size: 1.5vh;
+        border-radius: 10px;
+
+    }
+
+
+    .nav {
+        display: none;
+    }
+
+
+    .cover h1 {
+        font-size: 4vh;
+    }
+
+    .bmi {
+        height: 80vh;
+    }
+
+    .bmi h1 {
+        font-size: 3vh;
+    }
+
+    .bmi p {
+        font-size: 2vh;
+    }
+
+    .isimanfaat h1 {
+        font-size: 3vh;
+    }
+
+    .titleact h1 {
+        font-size: 3.2vh;
+    }
+
+    .titleact p {
+        font-size: 2.2vh;
+    }
+
+    .latihchild h1 {
+        font-size: 3vh;
+    }
+
+    .latihchild p {
+        font-size: 2vh;
+    }
+
+    .latihcontentg img, .latihcontenta img {
+        height: 25vh;
+    }
+
+    .contact {
+        display: grid;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact img {
+        width: 50%;
+        margin-left: 25%;
+    }
+
+    .ket {
+        font-size: 2vh;
+    }
+}
