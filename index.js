@@ -49,11 +49,33 @@ function calculateBMI(event) {
     const bmi = (weight / (height * height)).toFixed(2);
 
     let status = "";
-    if (bmi < 18.5) status = "Underweight";
-    else if (bmi < 24.9) status = "Normal weight";
-    else if (bmi < 29.9) status = "Overweight";
-    else status = "Obese";
+    let message = "";
+    
+    if (bmi < 18.5) {
+        status = "Underweight";
+        message = "Kamu langsing bukan kurus, tapi jangan lupa perhatikan asupan nutrisi dan lakukan olahraga secara teratur.";
+    } else if (bmi < 24.9) {
+        status = "Normal weight";
+        message = "Kamu sudah dalam kategori ideal! Jaga terus pola hidup sehatmu.";
+    } else if (bmi < 29.9) {
+        status = "Overweight";
+        message = "Kamu mungkin memiliki asupan yang besar, namun perhatikan nutrisi dan pola makan sehat";
+    } else {
+        status = "Obese";
+        message = "Jangan berkecil hati! Mulailah dengan pola makan sehat dan rutin berolahraga.";
+    }
 
     document.getElementById('bmi-value').textContent = bmi;
     document.getElementById('bmi-status').textContent = status;
+
+    const messageElement = document.getElementById('motivational-message');
+    messageElement.textContent = message;
+
+    // Reset animasi
+    messageElement.classList.remove('visible');
+    
+    // Trigger ulang animasi
+    setTimeout(() => {
+        messageElement.classList.add('visible');
+    }, 100);
 }
